@@ -7,6 +7,7 @@ const detail = require("./models/detail")
 const slider = require("./models/slider")
 const services = require("./models/service")
 const bodyParser = require("body-parser")
+const port = process.env.PORT || 8000;
 
 const routes=require('./routes/main')
 const { create } = require("hbs")
@@ -98,6 +99,6 @@ app.set('view engine','hbs')
 app.set("views","views")
 hbs.registerPartials("views/partials")
 
-app.listen(5555,()=>{
+app.listen(port,()=>{
     console.log("Server Strted")
 })
